@@ -1,0 +1,482 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/serif.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2>What is Git</h2>
+					<br>
+					<p>
+						<small> 
+							Git is a distributed version-control system for tracking changes in computer files and coordinating work on those files among multiple people
+						</small>
+					</p>
+				</section>
+				<section>
+					<h2>When Git is created</h2>
+					<br>
+					<p>
+						<small> 
+							Git was created by <a href="https://en.wikipedia.org/wiki/Linus_Torvalds">Linus Torvalds</a>  in 2005 for development of the Linux kernel
+							Current maintainer since 2005 is <a href="https://en.wikipedia.org/wiki/Junio_Hamano">Junio Hamano.</a>
+						</small>
+					</p>
+				</section>
+				<section>
+					<h3>Distributed vs Centralized Developement</h3>
+					<img src="resources/distributed_development.svg" alt="Centralized vs Distributed" width="700" height="400">
+					<br>
+					<small>Source <a href="https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud">Atlassian</a></small>
+				</section>
+				<section>
+					<h2>Basic Workflow</h2>
+					<img src="resources/Git_Basic_workflow.png" alt="Basic Workflow" width="1143" height="277">
+					<small>source <a href="https://uidaholib.github.io/get-git/3workflow.html">uidaholib.github.io</a></small>
+				</section>
+				<section>
+					<section id="fragments">
+							<h2>Saving Changes</h2>
+							<p class="fragment">git add</p>
+							<p class="fragment">git commit</p>
+							<p class="fragment">git stash</p>
+					</section>
+					<section id="fragments">
+							<h3>git add</h3>
+							<br>
+							<p class="fragment">
+								<small> 
+									 Adds a change in the working directory to the staging area. It tells Git that you want to include updates to a particular file in the next commit.
+								</small>
+							</p>
+
+							<p class="fragment">
+								<small> 
+									However, git add doesn't really affect the repository in any significant way—changes are not actually recorded until you run git commit.
+								</small>
+							</p>
+						</section>
+						<section id="fragments">
+							<h3>git commit</h3>
+							<p class="fragment">
+								<small> 
+									 Git commit refers to recording snapshots of the local repository at a given time (but not in the remote repository yet !)
+								</small>
+							</p>
+							<p class="fragment">
+								<small> 
+									 Committed snapshots will never change unless done explicitly
+								</small>
+							</p>
+							<br>
+							<p class="fragment">
+								<img src="resources/Git-Commit-Workflow.png" alt="Centralized vs Distributed" width="650" height="250">
+							</p>
+						</section>
+						<section id="fragments">
+							<h3>Demonstration</h3>
+							<p class="fragment">
+								<img src="resources/add.png" alt="Commit" width="700" height="350">
+							</p>
+						</section>
+						<section>
+							<p>
+								<img src="resources/commit.png" alt="Commit" width="747" height="400">
+							</p>
+						</section>
+						<section>
+							<p>
+								<img src="resources/commit2.png" alt="Commit" width="760" height="250">
+							</p>
+						</section>
+						<section id="fragments">
+							<h3>git stash</h3>
+							<br>
+							<p class="fragment">
+								<small> 
+									 It takes your uncommitted changes (both staged and unstaged), saves them away for later use.
+								</small>
+							</p>
+							<p class="fragment">
+								<small> 
+									However, git add doesn't really affect the repository in any significant way—changes are not actually recorded until you run git commit.
+								</small>
+							</p>
+						</section>
+						<section id="fragments">
+							<h3>Demonstration</h3>
+							<p class="fragment">
+								<small> 
+									 Stashing your work
+								</small>
+							</p>
+							<p class="fragment">
+								<img src="resources/stash_1.png" alt="Stashing" width="760" height="400">
+							</p>
+						</section>
+						<section>
+							<p>
+								<img src="resources/stash_2.png" alt="Stashing" width="780" height="320">
+							</p>
+						</section>
+						<section>
+							<p>
+								<small> 
+									 Applying your stashed changes
+								</small>
+							</p>
+							<p class="fragment">
+								<img src="resources/stash_3.png" alt="Stashing" width="770" height="330">
+							</p>
+						</section>
+				</section>
+				<section>
+					<section id="fragments">
+							<h2>Collaborating</h2>
+							<p class="fragment">git push</p>
+							<p class="fragment">git fetch</p>
+							<p class="fragment">git pull</p>
+							<p class="fragment">git remote</p>
+					</section>
+
+					<section >
+						<h3>git push</h3>
+						<br>
+						
+						<p class="fragment">
+							git push &lt;remote&gt; &lt;branch&gt;
+						</p>
+
+						<p class="fragment">
+							<small> 
+								The git push command is used to upload local repository content to a remote repository.
+							</small>
+						</p>
+						<p class="fragment">
+							<small> 
+								Pushing is how you transfer commits from your local repository to a remote repo.
+							</small>
+						</p>
+					</section>
+					
+					<section>
+						<h3>Warning !</h3>
+						<p>
+							<blockquote class="fragment" cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+								To prevent you from overwriting commits, Git won’t let you push when it results in a non-fast-forward merge in the destination repository.
+							</blockquote>
+						</p>
+						<p class="fragment">
+							If git push fails, you need to pull changes first
+						</p>
+						<p class="fragment">
+							git pull &lt;remote&gt; &lt;branch&gt;
+						</p>
+					</section>
+					<section>
+						<p>
+							git push &lt;remote&gt; --force
+							
+						</p>
+						<p class="fragment">
+							This will force the push even if it results in a non-fast-forward merge. 
+						</p>
+						<p>
+							<blockquote class="fragment" cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+								Do not use the --force flag unless you’re absolutely sure you know what you’re doing.
+							</blockquote>
+						</p>
+					</section>
+					<section>
+							<p>
+								<small> 
+									 Before and after pushing
+								</small>
+							</p>
+							<p class="fragment">
+								<img src="resources/push.png" alt="Stashing" width="350" height="540">
+							</p>
+					</section>
+					<section id="fragment">
+						<h3>git fetch</h3>
+						
+						<br>
+						<p class="fragment">
+							<small> 
+								 git fetch &lt;remote&gt; &lt;branch&gt;
+							</small>
+						<p>
+						<p class="fragment">
+							<small> 
+								 The git fetch command downloads changes from a remote repository into your local repo
+							</small>
+						<p>
+						<p class="fragment">
+							<small> 
+								Git ftech doesn't integrate any of this new changes into your working files.
+							</small>
+						</p>
+					</section>
+					<section id="fragment">
+						<h3>git pull</h3>
+						
+						<br>
+						<p class="fragment">
+								<small> 
+									 git pull &lt;remote&gt; &lt;branch&gt;
+								</small>
+						<p>
+						<p class="fragment">
+								<small> 
+									Incorporates changes from a remote repository into the current working files, git pull is shorthand for git fetch followed by git merge
+								</small>
+						<p>
+						<p class="fragment">
+							<small> 
+								Meaning that pull not only downloads new data; it also directly integrates it into your current working directory
+							</small>
+						</p>
+					</section>
+					<section>
+						<h3>fetch vs pull</h3>
+							<p class="fragment">
+								<img src="resources/fetch_pull.png" alt="Stashing" width="1100" height="480">
+							</p>
+					</section>
+					
+					<section>
+						<h3>git remote</h3>
+						<br>
+						<p class="fragment">
+							<small> 
+								The git remote command lets you create, view, and delete connections to remote repositories
+								Remote connections are more like bookmarks rather than direct links into other repositories. 
+							</small>
+						</p>
+						<p class="fragment">
+							<small> 
+								The git remote command is essentially an interface for managing a list of remote entries that are stored in the repository's ./.git/config file.
+							</small>
+						</p>
+						<p class="fragment">
+								<img src="resources/remote_1.png" alt="Stashing" width="816" height="81">
+						</p>
+						<p class="fragment">
+							<img src="resources/remote_2.png" alt="Stashing" width="825" height="119">
+						</p>
+
+					</section>
+					<section>
+						<h3>Creating git remote configuration</h3>
+						<p class="fragment">
+							<small> 
+								git remote add &lt;name&gt; &lt;url&gt;
+							</small>
+						</p>
+						<p class="fragment">
+								<img src="resources/remote_add_1.png" alt="Stashing" width="828" height="105">
+						</p>
+						<p class="fragment">
+							<img src="resources/remote_add_2.png" alt="Stashing" width="817" height="64">
+						</p>
+						<p class="fragment">
+							<img src="resources/remote_add_3.png" alt="Stashing" width="831" height="155">
+						</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Undo Changes</h2>
+					
+						<p class="fragment">
+								<small>
+									Undoing the last commit
+								</small>
+						</p>
+						<p class="fragment">
+								<small> 
+									 In case you don't need to remove the last commit. but you need only to  change it.
+									 Then do more changes and when you are done do "git commit --amend"
+									 The new changes will be added to the amended commit
+								</small>
+						</p>
+						<p class="fragment">
+								<small> 
+									<img src="resources/amend-demo-1.png" alt="Stashing" width="700" height="350">
+								</small>
+						</p>
+					</section>
+					<section>
+						<p>
+								<small> 
+									<img src="resources/amend-demo-2.png" alt="Stashing" width="700" height="300">
+								</small>
+						</p>
+						<p class="fragment">
+								<small> 
+									<img src="resources/amend-demo-3.png" alt="Stashing" width="740" height="320">
+								</small>
+						</p>
+					</section>
+					<section>
+							<h3>Undoing local commit</h3>
+							<p class="fragment">
+								<small> 
+								Let's say I committed locally, but now want to remove that commit.<br>
+								git reset<br>
+										--soft &nbsp reset only HEAD<br>
+										--mixed &nbsp reset HEAD and index<br>
+										--hard &nbsp reset HEAD, index and working tree<br>
+								</small>
+							</p>
+							<p class="fragment">
+								<small> 
+									<img src="resources/git-reset.png" alt="Stashing" width="593" height="421">
+								</small>
+						</p>
+					</section>
+					<section id="fragments">
+							<h3>Exercice</h3>
+							<p class="fragment">
+								<small> 
+								mkdir git_reset_demo<br>
+								cd git_reset_demo<br>
+								git init .<br>
+								touch toto.txt<br>
+								git add toto.txt<br>
+								git commit -m"initial commit"<br>
+								do more commits
+								experience git reset with different options
+								...
+
+								</small>
+							</p>
+					</section>
+					<section>
+						<h3>Undoing public commit</h3>
+						<br>
+						<p class="fragment">
+								<small> 
+									If you have already made your commits public, you will want to create a new commit which will "revert" the changes you made in your previous commit (current HEAD).<br><br>
+
+									git revert HEAD<br>
+									Your changes will now be reverted and ready for you to commit:<br>
+									<img src="resources/git-revert.png" alt="Stashing" width="527" height="128">
+								</small>
+						</p>
+					</section>
+					<section id="fragments">
+							<h3>Exercice</h3>
+							<p class="fragment">
+								<small> 
+								mkdir git_revert_demo<br>
+								cd git_revert_demo<br>
+								git init .<br>
+								touch toto.txt<br>
+								git add toto.txt<br>
+								git commit -m"initial commit"<br>
+								do more commits
+								do git revert HEAD
+								...
+
+								</small>
+							</p>
+					</section>
+				</section>
+				<section>
+					<section>
+							<h3>Merging vs Rebasing</h3>
+							<br>
+							<p class="fragment">The merge option</p>
+							<p class="fragment">
+									<small> 
+										If you want to merge the master branch into the feature<br>
+										git checkout feature<br>
+										git merge master<br>
+										Or<br>
+										git merge master feature<br>
+										<img src="resources/merge_option.png" alt="Merge option" width="600" height="400">
+									</small>
+							</p>
+					</section>
+					<section>
+							<p>The rebase option</p>
+							<p class="fragment">
+									<small> 
+										You can rebase the feature branch onto the master branch by doing the following:<br>
+										git checkout feature<br>
+										git rebase master<br>
+										<img src="resources/rebase_option.png" alt="Merge option" width="657" height="417">
+									</small>
+							</p>
+					</section>
+					<section>
+							<p>Conclusion</p>
+							<p class="fragment">
+									<small> 
+										The safest way is to use always merge rather than rebase.<br>
+										Rebasing can be dangerous! Rewriting history of shared branches is prone to team work breakage<br>
+									</small>
+							</p>
+					</section>
+				</section>	
+				<section>
+					<h2>Rebase Forked Repository</h2>
+					<p class="fragment">
+									<small> 
+										Create your upstream with remote command (add link to remote slide) <br>
+										git fetch upstream<br>
+										git checkout master<br>
+										git merge upstream/master<br>
+									</small>
+							</p>
+				</section>
+				<section>
+					<h2>In Depth</h2>
+					<ul>
+						<li>Merge vs Rebase</li>
+						<li>Log, Diff</li>
+						<li>Rebase Forked Repository</li>
+					</ul>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
