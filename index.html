@@ -94,7 +94,7 @@
 							</p>
 						</section>
 						<section id="fragments">
-							<h3>Demonstration</h3>
+							<h3>Demo</h3>
 							<p class="fragment">
 								<img src="resources/add.png" alt="Commit" width="700" height="350">
 							</p>
@@ -124,7 +124,7 @@
 							</p>
 						</section>
 						<section id="fragments">
-							<h3>Demonstration</h3>
+							<h3>Demo</h3>
 							<p class="fragment">
 								<small> 
 									 Stashing your work
@@ -162,11 +162,10 @@
 					<section >
 						<h3>git push</h3>
 						<br>
-						
-						<p class="fragment">
-							git push &lt;remote&gt; &lt;branch&gt;
-						</p>
-
+							
+						<pre class="fragment"><code class="hljs">
+$ git push &lt;remote&gt; &lt;branch&gt;
+						</code></pre>
 						<p class="fragment">
 							<small> 
 								The git push command is used to upload local repository content to a remote repository.
@@ -187,19 +186,25 @@
 							</blockquote>
 						</p>
 						<p class="fragment">
-							If git push fails, you need to pull changes first
+							<small>
+								If git push fails, you need to pull changes first
+							</small>
 						</p>
+						<pre class="fragment"><code class="hljs">
+$ git pull &lt;remote&gt; &lt;branch&gt;
+						</code></pre>
 						<p class="fragment">
-							git pull &lt;remote&gt; &lt;branch&gt;
+							
 						</p>
 					</section>
 					<section>
-						<p>
-							git push &lt;remote&gt; --force
-							
-						</p>
+						<pre><code class="hljs">
+$ git push &lt;remote&gt; --force
+						</code></pre>
 						<p class="fragment">
-							This will force the push even if it results in a non-fast-forward merge. 
+							<small>
+								This will force the push even if it results in a non-fast-forward merge. 
+							</small>
 						</p>
 						<p>
 							<blockquote class="fragment" cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
@@ -209,9 +214,7 @@
 					</section>
 					<section>
 							<p>
-								<small> 
-									 Before and after pushing
-								</small>
+								Before and after pushing
 							</p>
 							<p class="fragment">
 								<img src="resources/push.png" alt="Stashing" width="350" height="540">
@@ -221,11 +224,9 @@
 						<h3>git fetch</h3>
 						
 						<br>
-						<p class="fragment">
-							<small> 
-								 git fetch &lt;remote&gt; &lt;branch&gt;
-							</small>
-						<p>
+						<pre class="fragment"><code class="hljs">
+git fetch &lt;remote&gt; &lt;branch&gt;
+						</code></pre>
 						<p class="fragment">
 							<small> 
 								 The git fetch command downloads changes from a remote repository into your local repo
@@ -241,11 +242,9 @@
 						<h3>git pull</h3>
 						
 						<br>
-						<p class="fragment">
-								<small> 
-									 git pull &lt;remote&gt; &lt;branch&gt;
-								</small>
-						<p>
+						<pre class="fragment"><code class="hljs">
+git pull &lt;remote&gt; &lt;branch&gt;
+						</code></pre>
 						<p class="fragment">
 								<small> 
 									Incorporates changes from a remote repository into the current working files, git pull is shorthand for git fetch followed by git merge
@@ -269,7 +268,7 @@
 						<br>
 						<p class="fragment">
 							<small> 
-								The git remote command lets you create, view, and delete connections to remote repositories
+								The git remote command lets you create, view, and delete connections to remote repositories.<br>
 								Remote connections are more like bookmarks rather than direct links into other repositories. 
 							</small>
 						</p>
@@ -288,11 +287,9 @@
 					</section>
 					<section>
 						<h3>Creating git remote configuration</h3>
-						<p class="fragment">
-							<small> 
-								git remote add &lt;name&gt; &lt;url&gt;
-							</small>
-						</p>
+						<pre class="fragment"><code class="hljs">
+$ git remote add &lt;name&gt; &lt;url&gt;
+						</code></pre>
 						<p class="fragment">
 								<img src="resources/remote_add_1.png" alt="Stashing" width="828" height="105">
 						</p>
@@ -309,9 +306,7 @@
 						<h2>Undo Changes</h2>
 					
 						<p class="fragment">
-								<small>
-									Undoing the last commit
-								</small>
+								Undoing the last commit
 						</p>
 						<p class="fragment">
 								<small> 
@@ -322,55 +317,45 @@
 						</p>
 						<p class="fragment">
 								<small> 
-									<img src="resources/amend-demo-1.png" alt="Stashing" width="700" height="350">
+									<img src="resources/amend-demo-1.png" alt="Amend" width="700" height="360">
 								</small>
 						</p>
 					</section>
 					<section>
-						<p>
-								<small> 
-									<img src="resources/amend-demo-2.png" alt="Stashing" width="700" height="300">
-								</small>
-						</p>
-						<p class="fragment">
-								<small> 
-									<img src="resources/amend-demo-3.png" alt="Stashing" width="740" height="320">
-								</small>
-						</p>
+						<pre><code class="hljs">$ git commit --amend</code></pre>
+						<p><small><img src="resources/amend-demo-2.png" alt="Amend" width="700" height="250"></small></p>
+						<p class="fragment"><small><img src="resources/amend-demo-3.png" alt="Amend" width="740" height="280"></small></p>
 					</section>
 					<section>
 							<h3>Undoing local commit</h3>
 							<p class="fragment">
 								<small> 
-								Let's say I committed locally, but now want to remove that commit.<br>
-								git reset<br>
-										--soft &nbsp reset only HEAD<br>
-										--mixed &nbsp reset HEAD and index<br>
-										--hard &nbsp reset HEAD, index and working tree<br>
+									Let's say I committed locally, but now I want to remove that commit.<br>
 								</small>
 							</p>
+							<pre class="fragment"><code class="hljs">
+git reset --soft  // reset only HEAD
+	  --mixed // reset HEAD and index
+	  --hard  // reset HEAD, index and working tree
+							</code></pre>
 							<p class="fragment">
 								<small> 
-									<img src="resources/git-reset.png" alt="Stashing" width="593" height="421">
+									<img src="resources/git-reset.png" alt="Reset" width="593" height="340">
 								</small>
-						</p>
+							</p>
 					</section>
 					<section id="fragments">
 							<h3>Exercice</h3>
-							<p class="fragment">
-								<small> 
-								mkdir git_reset_demo<br>
-								cd git_reset_demo<br>
-								git init .<br>
-								touch toto.txt<br>
-								git add toto.txt<br>
-								git commit -m"initial commit"<br>
-								do more commits
-								experience git reset with different options
-								...
-
-								</small>
-							</p>
+							<pre class="fragment"><code class="hljs">
+$ mkdir git_reset_demo
+$ cd git_reset_demo
+$ git init .
+$ touch toto.txt
+$ git add toto.txt
+$ git commit -m"initial commit"
+//do more commits
+$ git reset  [--mixed | --soft | --hard]
+							</code></pre>
 					</section>
 					<section>
 						<h3>Undoing public commit</h3>
@@ -387,49 +372,90 @@
 					</section>
 					<section id="fragments">
 							<h3>Exercice</h3>
-							<p class="fragment">
-								<small> 
-								mkdir git_revert_demo<br>
-								cd git_revert_demo<br>
-								git init .<br>
-								touch toto.txt<br>
-								git add toto.txt<br>
-								git commit -m"initial commit"<br>
-								do more commits
-								do git revert HEAD
-								...
+							<pre class="fragment"><code class="hljs">
+$ mkdir git_revert_demo
+$ cd git_revert_demo<br>
+$ git init .
+$ touch toto.txt
+$ git add toto.txt
+$ git commit -m"initial commit"
+//do more commits
+$ git revert HEAD
 
-								</small>
-							</p>
+							</code></pre>
 					</section>
 				</section>
 				<section>
 					<section>
 							<h3>Merging vs Rebasing</h3>
-							<br>
 							<p class="fragment">The merge option</p>
 							<p class="fragment">
 									<small> 
-										If you want to merge the master branch into the feature<br>
-										git checkout feature<br>
-										git merge master<br>
-										Or<br>
-										git merge master feature<br>
-										<img src="resources/merge_option.png" alt="Merge option" width="600" height="400">
+										If you want to merge the master branch into the feature
+									</small>
+							</p>
+							<pre class="fragment"><code class="hljs">$ git checkout feature
+$ git merge master</code></pre>
+							<p class="fragment">
+									<small> 
+										<img src="resources/merge_option.png" alt="Merge option" width="600" height="340">
 									</small>
 							</p>
 					</section>
+					
 					<section>
 							<p>The rebase option</p>
 							<p class="fragment">
 									<small> 
 										You can rebase the feature branch onto the master branch by doing the following:<br>
-										git checkout feature<br>
-										git rebase master<br>
+									</small>
+							</p>
+							<pre class="fragment"><code class="hljs">$ git checkout feature
+$ git rebase master</code></pre>
+							<p class="fragment">
+									<small> 
 										<img src="resources/rebase_option.png" alt="Merge option" width="657" height="417">
 									</small>
 							</p>
 					</section>
+					<section>
+					<h2>Pros & Cons</h2>
+					<table style="width:100%">
+						<thead>
+							<tr>
+								<th>Options</th>
+								<th>Merge</th>
+								<th>Rebase</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Pros</td>
+								<td>
+									<p class="fragment"><small>Non-destructive</small></p>
+									<p class="fragment"><small>Preserve History</small></p>
+									<p class="fragment"><small>Easy to rollback</small></p>
+								</td>
+								<td>
+									<p class="fragment"><small>Linear history</small></p>
+									<p class="fragment"><small>More readable graph</small></p>
+								</td>
+							</tr>
+							<tr>
+								<td>Cons</td>
+								<td>
+									<p class="fragment"><small>Graph difficult to read<br> for multiple branch scenario</p>
+								</td>
+								<td>
+									<p class="fragment"><small>Re-write history</small></p>
+									<p class="fragment"><small>tougher to resolve conflict</small></p>
+									<p class="fragment"><small class="fragment grow"><span class="fragment highlight-red">Could broke a branch</span></small></p>
+								</td>
+							</tr>
+
+						</tbody>
+					</table>
+				</section>
 					<section>
 							<p>Conclusion</p>
 							<p class="fragment">
@@ -441,13 +467,29 @@
 					</section>
 				</section>	
 				<section>
-					<h2>Rebase Forked Repository</h2>
+					<h3>Synching a forked repo</h3>
 					<p class="fragment">
 									<small> 
-										Create your upstream with remote command (add link to remote slide) <br>
-										git fetch upstream<br>
-										git checkout master<br>
-										git merge upstream/master<br>
+										Add the original GitHub repository as a "remote". Pleae see <a href="#/5/9">git remote</a><br>
+										Fetch all the branches of that remote into remote-tracking branches, such as upstream/master:
+									</small>
+							</p>
+							<pre class="fragment"><code class="hljs">$ git fetch upstream</code></pre>
+							<p class="fragment">
+									<small> 
+										Make sure that you're on your master branch:
+									</small>
+							</p>
+							<pre class="fragment"><code class="hljs">$ git checkout master</code></pre>
+							<p class="fragment">
+									<small> 
+										Merge the changes from upstream/master into your local master branch.
+									</small>
+							</p>
+							<pre class="fragment"><code class="hljs">$ git merge upstream/master</code></pre>
+							<p class="fragment">
+									<small> 
+										This brings your fork's master branch into sync with the upstream repository, without losing your local changes.
 									</small>
 							</p>
 				</section>
