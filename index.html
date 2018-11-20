@@ -38,8 +38,7 @@
 					<br>
 					<p>
 						<small> 
-							Git was created by <a href="https://en.wikipedia.org/wiki/Linus_Torvalds">Linus Torvalds</a>  in 2005 for development of the Linux kernel
-							Current maintainer since 2005 is <a href="https://en.wikipedia.org/wiki/Junio_Hamano">Junio Hamano.</a>
+							Git was created by <a href="https://en.wikipedia.org/wiki/Linus_Torvalds">Linus Torvalds</a>  in 2005 for development of the Linux kernel.<br>Current maintainer since 2005 is <a href="https://en.wikipedia.org/wiki/Junio_Hamano">Junio Hamano.</a>
 						</small>
 					</p>
 				</section>
@@ -109,6 +108,15 @@
 								<img src="resources/commit2.png" alt="Commit" width="760" height="250">
 							</p>
 						</section>
+						<section>
+							<p>
+								<img src="resources/staging-area.png" alt="staging-area" width="500" height="280">
+							</p>
+							<p class="fragment">
+								<img src="resources/skip-staging-area.png" alt="skip-staging-area" width="500" height="280">
+							</p>
+						</section>
+
 						<section id="fragments">
 							<h3>git stash</h3>
 							<br>
@@ -439,6 +447,7 @@ $ git rebase master</code></pre>
 								<td>
 									<p class="fragment"><small>Linear history</small></p>
 									<p class="fragment"><small>More readable graph</small></p>
+									<p class="fragment"><small>It eliminates the unnecessary merge commit</small></p>
 								</td>
 							</tr>
 							<tr>
@@ -449,7 +458,7 @@ $ git rebase master</code></pre>
 								<td>
 									<p class="fragment"><small>Re-write history</small></p>
 									<p class="fragment"><small>tougher to resolve conflict</small></p>
-									<p class="fragment"><small class="fragment grow"><span class="fragment highlight-red">Could broke a branch</span></small></p>
+									<p class="fragment"><small class="fragment grow"><span class="fragment highlight-red">Could broke a public branch</span></small></p>
 								</td>
 							</tr>
 
@@ -464,6 +473,9 @@ $ git rebase master</code></pre>
 										Rebasing can be dangerous! Rewriting history of shared branches is prone to team work breakage<br>
 									</small>
 							</p>
+							<p class="fragment">
+									<small class="fragment grow"><span class="fragment highlight-red">Never, NEVER, NEVER, rebase a public branch</span></small>
+							</p>
 					</section>
 				</section>	
 				<section>
@@ -471,6 +483,10 @@ $ git rebase master</code></pre>
 					<p class="fragment">
 									<small> 
 										Add the original GitHub repository as a "remote". Pleae see <a href="#/5/9">git remote</a><br>
+									</small>
+							</p>
+							<p class="fragment">
+									<small> 
 										Fetch all the branches of that remote into remote-tracking branches, such as upstream/master:
 									</small>
 							</p>
@@ -493,14 +509,6 @@ $ git rebase master</code></pre>
 									</small>
 							</p>
 				</section>
-				<section>
-					<h2>In Depth</h2>
-					<ul>
-						<li>Merge vs Rebase</li>
-						<li>Log, Diff</li>
-						<li>Rebase Forked Repository</li>
-					</ul>
-				</section>
 			</div>
 		</div>
 
@@ -511,6 +519,8 @@ $ git rebase master</code></pre>
 			// More info about config & dependencies:
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
+			
+
 			Reveal.initialize({
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
