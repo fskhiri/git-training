@@ -24,7 +24,10 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>
+				<section data-transition="convex">
+					<h2>Demystifying Git</h2>
+				</section>
+				<section data-transition="convex">
 					<h2>What is Git</h2>
 					<br>
 					<p>
@@ -33,7 +36,7 @@
 						</small>
 					</p>
 				</section>
-				<section>
+				<section data-transition="convex">
 					<h2>When Git is created</h2>
 					<br>
 					<p>
@@ -42,25 +45,25 @@
 						</small>
 					</p>
 				</section>
-				<section>
+				<section data-transition="convex">
 					<h3>Distributed vs Centralized Developement</h3>
 					<img src="resources/distributed_development.svg" alt="Centralized vs Distributed" width="700" height="400">
 					<br>
 					<small>Source <a href="https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud">Atlassian</a></small>
 				</section>
-				<section>
+				<section data-transition="convex">
 					<h2>Basic Workflow</h2>
 					<img src="resources/Git_Basic_workflow.png" alt="Basic Workflow" width="1143" height="277">
 					<small>source <a href="https://uidaholib.github.io/get-git/3workflow.html">uidaholib.github.io</a></small>
 				</section>
-				<section>
+				<section data-transition="convex">
 					<section id="fragments">
 							<h2>Saving Changes</h2>
 							<p class="fragment">git add</p>
 							<p class="fragment">git commit</p>
 							<p class="fragment">git stash</p>
 					</section>
-					<section id="fragments">
+					<section data-transition="convex" id="fragments">
 							<h3>git add</h3>
 							<br>
 							<p class="fragment">
@@ -75,7 +78,7 @@
 								</small>
 							</p>
 						</section>
-						<section id="fragments">
+						<section data-transition="convex" id="fragments">
 							<h3>git commit</h3>
 							<p class="fragment">
 								<small> 
@@ -92,23 +95,23 @@
 								<img src="resources/Git-Commit-Workflow.png" alt="Centralized vs Distributed" width="650" height="250">
 							</p>
 						</section>
-						<section id="fragments">
+						<section data-transition="convex" id="fragments">
 							<h3>Demo</h3>
 							<p class="fragment">
 								<img src="resources/add.png" alt="Commit" width="700" height="350">
 							</p>
 						</section>
-						<section>
+						<section data-transition="convex">
 							<p>
 								<img src="resources/commit.png" alt="Commit" width="747" height="400">
 							</p>
 						</section>
-						<section>
+						<section data-transition="convex">
 							<p>
 								<img src="resources/commit2.png" alt="Commit" width="760" height="250">
 							</p>
 						</section>
-						<section>
+						<section data-transition="convex">
 							<p>
 								<img src="resources/staging-area.png" alt="staging-area" width="500" height="280">
 							</p>
@@ -117,7 +120,7 @@
 							</p>
 						</section>
 
-						<section id="fragments">
+						<section data-transition="convex" id="fragments">
 							<h3>git stash</h3>
 							<br>
 							<p class="fragment">
@@ -131,7 +134,7 @@
 								</small>
 							</p>
 						</section>
-						<section id="fragments">
+						<section data-transition="convex" id="fragments">
 							<h3>Demo</h3>
 							<p class="fragment">
 								<small> 
@@ -142,12 +145,12 @@
 								<img src="resources/stash_1.png" alt="Stashing" width="760" height="400">
 							</p>
 						</section>
-						<section>
+						<section data-transition="convex">
 							<p>
 								<img src="resources/stash_2.png" alt="Stashing" width="780" height="320">
 							</p>
 						</section>
-						<section>
+						<section data-transition="convex">
 							<p>
 								<small> 
 									 Applying your stashed changes
@@ -158,8 +161,8 @@
 							</p>
 						</section>
 				</section>
-				<section>
-					<section id="fragments">
+				<section data-transition="convex">
+					<section data-transition="convex" id="fragments">
 							<h2>Collaborating</h2>
 							<p class="fragment">git push</p>
 							<p class="fragment">git fetch</p>
@@ -167,7 +170,7 @@
 							<p class="fragment">git remote</p>
 					</section>
 
-					<section >
+					<section data-transition="convex" >
 						<h3>git push</h3>
 						<br>
 							
@@ -186,7 +189,7 @@ $ git push &lt;remote&gt; &lt;branch&gt;
 						</p>
 					</section>
 					
-					<section>
+					<section data-transition="convex">
 						<h3>Warning !</h3>
 						<p>
 							<blockquote class="fragment" cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
@@ -201,11 +204,8 @@ $ git push &lt;remote&gt; &lt;branch&gt;
 						<pre class="fragment"><code class="hljs">
 $ git pull &lt;remote&gt; &lt;branch&gt;
 						</code></pre>
-						<p class="fragment">
-							
-						</p>
 					</section>
-					<section>
+					<section data-transition="convex">
 						<pre><code class="hljs">
 $ git push &lt;remote&gt; --force
 						</code></pre>
@@ -220,7 +220,7 @@ $ git push &lt;remote&gt; --force
 							</blockquote>
 						</p>
 					</section>
-					<section>
+					<section data-transition="convex">
 							<p>
 								Before and after pushing
 							</p>
@@ -228,7 +228,7 @@ $ git push &lt;remote&gt; --force
 								<img src="resources/push.png" alt="Stashing" width="350" height="540">
 							</p>
 					</section>
-					<section id="fragment">
+					<section data-transition="convex" id="fragment">
 						<h3>git fetch</h3>
 						
 						<br>
@@ -246,7 +246,7 @@ git fetch &lt;remote&gt; &lt;branch&gt;
 							</small>
 						</p>
 					</section>
-					<section id="fragment">
+					<section data-transition="convex" id="fragment">
 						<h3>git pull</h3>
 						
 						<br>
@@ -264,14 +264,14 @@ git pull &lt;remote&gt; &lt;branch&gt;
 							</small>
 						</p>
 					</section>
-					<section>
+					<section data-transition="convex">
 						<h3>fetch vs pull</h3>
 							<p class="fragment">
 								<img src="resources/fetch_pull.png" alt="Stashing" width="1100" height="480">
 							</p>
 					</section>
 					
-					<section>
+					<section data-transition="convex">
 						<h3>git remote</h3>
 						<br>
 						<p class="fragment">
@@ -293,7 +293,7 @@ git pull &lt;remote&gt; &lt;branch&gt;
 						</p>
 
 					</section>
-					<section>
+					<section data-transition="convex">
 						<h3>Creating git remote configuration</h3>
 						<pre class="fragment"><code class="hljs">
 $ git remote add &lt;name&gt; &lt;url&gt;
@@ -309,8 +309,8 @@ $ git remote add &lt;name&gt; &lt;url&gt;
 						</p>
 					</section>
 				</section>
-				<section>
-					<section>
+				<section data-transition="convex">
+					<section data-transition="convex">
 						<h2>Undo Changes</h2>
 					
 						<p class="fragment">
@@ -329,12 +329,12 @@ $ git remote add &lt;name&gt; &lt;url&gt;
 								</small>
 						</p>
 					</section>
-					<section>
+					<section data-transition="convex">
 						<pre><code class="hljs">$ git commit --amend</code></pre>
 						<p><small><img src="resources/amend-demo-2.png" alt="Amend" width="700" height="250"></small></p>
 						<p class="fragment"><small><img src="resources/amend-demo-3.png" alt="Amend" width="740" height="280"></small></p>
 					</section>
-					<section>
+					<section data-transition="convex">
 							<h3>Undoing local commit</h3>
 							<p class="fragment">
 								<small> 
@@ -352,7 +352,7 @@ git reset --soft  // reset only HEAD
 								</small>
 							</p>
 					</section>
-					<section id="fragments">
+					<section data-transition="convex" id="fragments">
 							<h3>Exercice</h3>
 							<pre class="fragment"><code class="hljs">
 $ mkdir git_reset_demo
@@ -365,7 +365,7 @@ $ git commit -m"initial commit"
 $ git reset  [--mixed | --soft | --hard]
 							</code></pre>
 					</section>
-					<section>
+					<section data-transition="convex">
 						<h3>Undoing public commit</h3>
 						<br>
 						<p class="fragment">
@@ -378,7 +378,7 @@ $ git reset  [--mixed | --soft | --hard]
 								</small>
 						</p>
 					</section>
-					<section id="fragments">
+					<section data-transition="convex" id="fragments">
 							<h3>Exercice</h3>
 							<pre class="fragment"><code class="hljs">
 $ mkdir git_revert_demo
@@ -393,8 +393,8 @@ $ git revert HEAD
 							</code></pre>
 					</section>
 				</section>
-				<section>
-					<section>
+				<section data-transition="convex">
+					<section data-transition="convex">
 							<h3>Merging vs Rebasing</h3>
 							<p class="fragment">The merge option</p>
 							<p class="fragment">
@@ -411,7 +411,7 @@ $ git merge master</code></pre>
 							</p>
 					</section>
 					
-					<section>
+					<section data-transition="convex">
 							<p>The rebase option</p>
 							<p class="fragment">
 									<small> 
@@ -426,7 +426,7 @@ $ git rebase master</code></pre>
 									</small>
 							</p>
 					</section>
-					<section>
+					<section data-transition="convex">
 					<h2>Pros & Cons</h2>
 					<table style="width:100%">
 						<thead>
@@ -465,7 +465,7 @@ $ git rebase master</code></pre>
 						</tbody>
 					</table>
 				</section>
-					<section>
+					<section data-transition="convex">
 							<p>Conclusion</p>
 							<p class="fragment">
 									<small> 
@@ -478,7 +478,7 @@ $ git rebase master</code></pre>
 							</p>
 					</section>
 				</section>	
-				<section>
+				<section data-transition="convex">
 					<h3>Synching a forked repo</h3>
 					<p class="fragment">
 									<small> 
